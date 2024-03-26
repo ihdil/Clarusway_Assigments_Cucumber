@@ -13,10 +13,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class StepDefinitions {
     private WebDriver driver;
-
     @Given("user goes to the {string}")
     public void user_goes_to_the(String page_url) {
         driver = new ChromeDriver();
@@ -25,8 +25,8 @@ public class StepDefinitions {
     }
 
     @Then("user waits for {int} seconds")
-    public void user_waits_for_seconds(Integer init1) {
-        new WebDriverWait(driver, Duration.ofSeconds(init1));
+    public void user_waits_for_seconds(Integer init1) throws InterruptedException {
+    Thread.sleep(init1*1000);
     }
 
     @Then("verifies that the page title contains the word {string}")
