@@ -1,5 +1,4 @@
 Feature: Homework
-    @Regression @WebGUI
   Scenario Outline:  dynamic url
     Given user goes to the "<page_url>"
     Then user waits for 5 seconds
@@ -8,5 +7,5 @@ Feature: Homework
     Examples:
       |page_url|  title|
       |https://www.google.com/ | Google |
-      |https://www.amazon.com/ | Amazon.com |
+      |https://www.amazon.com/ | Amazon |
       |https://youtube.com | YouTube  |

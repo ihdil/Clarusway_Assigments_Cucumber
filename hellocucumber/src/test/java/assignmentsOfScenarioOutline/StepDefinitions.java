@@ -26,7 +26,7 @@ public class StepDefinitions {
 
     @Then("user waits for {int} seconds")
     public void user_waits_for_seconds(Integer init1) throws InterruptedException {
-    Thread.sleep(init1*1000);
+        Thread.sleep(init1*1000);
     }
 
     @Then("verifies that the page title contains the word {string}")
